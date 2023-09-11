@@ -12,12 +12,18 @@ int returnSumOf3Num(int num1, int num2, int num3)
 }
 void findMaxOf3Num(int num1, int num2, int num3)
 {
-   if ((num1 > num2) && (num1 > num3))
+   if ((num1 >= num2) && (num1 >= num3))
       cout << "Maximum number is :- " << num1 << endl;
-   else if ((num2 > num1) && (num2 > num3))
+   else if ((num2 >= num1) && (num2 >= num3))
       cout << "Maximum number is :- " << num2 << endl;
    else
       cout << "Maximum number is :- " << num3 << endl;
+}
+void findMaxOf3NumUsingMax(int num1, int num2, int num3)
+{
+   int temp = max(num1, num2);
+   int maximum = max(temp, num3);
+   cout << "Maximum number is :- " << maximum;
 }
 void printCountingFrom1Tonum(int num)
 {
@@ -67,7 +73,7 @@ void sumOfAllNumberUptoNum(int num)
    }
    cout << "Sum of all Numbers upto N is :- " << sum << endl;
 }
-void sumOfAllEvenNumberUptoNum(int num)
+void sumOfAllEvenNumberUptoNum(int num) // Bad Practice - if(num%2==0) ? why ?
 {
    int sum = 0;
    for (int i = 2; i <= num; i = i + 2)
@@ -95,6 +101,7 @@ int main()
    // int ans = returnSumOf3Num(num1, num2, num3);
    // cout << "Sum of given three number is :- " << ans << endl;
    // findMaxOf3Num(num1, num2, num3);
+   // findMaxOf3NumUsingMax(num1, num2, num3);
    // printCountingFrom1Tonum(num);
    // checkPrimeOrNot(num);
    // checkEvenOrOdd(num);
