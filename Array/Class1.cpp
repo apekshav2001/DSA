@@ -165,7 +165,7 @@ int main()
    int arr[5];
    // bool brr[15];
    int size = 5;
-   // printDoubleValueArrayElement(arr, size);
+   printDoubleValueArrayElement(arr, size);
    // printSumOfEveryArrayElement(arr, size);
    // bool ans = linearSearch(arr, size);
    // if (ans)
